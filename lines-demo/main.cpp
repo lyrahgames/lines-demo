@@ -1,6 +1,9 @@
-#include <print>
-#include <xstd/xstd.hpp>
+#include "app.hpp"
 
 int main(int argc, char* argv[]) {
-  std::println("Hello, World!");
+  std::string line{};
+  while (not done()) {
+    std::getline(std::cin, line);
+    lua::eval(line);
+  }
 }
