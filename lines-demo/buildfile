@@ -1,0 +1,14 @@
+import libs = \
+  libxstd%lib{xstd} \
+  sol2%lib{sol2} \
+  cpptrace%lib{cpptrace} \
+  libsfml-graphics%lib{sfml-graphics} \
+  glbinding%lib{glbinding} \
+  glm%lib{glm} \
+
+exe{lines-demo}: {hxx ixx txx cxx}{**} $libs
+{
+  test = true
+}
+
+cxx.poptions =+ "-I$out_root" "-I$src_root"
