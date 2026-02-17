@@ -8,7 +8,11 @@ import libs = \
 
 exe{lines-demo}: {hxx ixx txx cxx}{**} $libs
 {
-  test = true
+  test.arguments = "$src_base/default.lua"
 }
 
 cxx.poptions =+ "-I$out_root" "-I$src_root"
+
+# Enable sol2's builtin safety checks.
+#
+cxx.poptions += -DSOL_ALL_SAFETIES_ON=1

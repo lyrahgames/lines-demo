@@ -1,9 +1,8 @@
 #include "app.hpp"
 
 int main(int argc, char* argv[]) {
-  std::string line{};
+  for (int i = 1; i < argc; ++i) lua::eval_file(argv[i]);
   while (not done()) {
-    std::getline(std::cin, line);
-    lua::eval(line);
+    lua::live::watch();
   }
 }
