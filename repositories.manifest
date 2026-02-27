@@ -9,3 +9,7 @@ location: https://pkg.cppget.org/1/testing
 :
 role: prerequisite
 location: https://github.com/lyrahgames/xstd-cpp.git#main
+
+:
+role: prerequisite
+location: https://github.com/lyrahgames/sandbox-cpp.git#main

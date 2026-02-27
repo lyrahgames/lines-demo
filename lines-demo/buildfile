@@ -1,4 +1,5 @@
 import libs = \
+  libsandbox%lib{sandbox} \
   libxstd%lib{xstd} \
   sol2%lib{sol2} \
   cpptrace%lib{cpptrace} \
@@ -6,9 +7,9 @@ import libs = \
   glbinding%lib{glbinding} \
   glm%lib{glm} \
 
-exe{lines-demo}: {hxx ixx txx cxx}{**} $libs
+exe{lines-demo}: {hxx ixx txx cxx mxx}{**} $libs
 {
-  test.arguments = "$src_base/default.lua"
+  test.arguments = "$src_root/scripts/default.lua"
 }
 
 cxx.poptions =+ "-I$out_root" "-I$src_root"
