@@ -6,11 +6,9 @@ import libs = \
   libsfml-graphics%lib{sfml-graphics} \
   glbinding%lib{glbinding} \
   glm%lib{glm} \
+  fmt%lib{fmt}
 
-exe{lines-demo}: {hxx ixx txx cxx mxx}{**} $libs
-{
-  test.arguments = "$src_root/scripts/default.lua"
-}
+exe{lines-demo}: {hxx ixx txx cxx mxx}{**} $libs testscript
 
 cxx.poptions =+ "-I$out_root" "-I$src_root"
 

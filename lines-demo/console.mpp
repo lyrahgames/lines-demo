@@ -1,0 +1,13 @@
+export module console;
+
+import std;
+
+export namespace console::log {
+
+void text(std::string_view str);
+void debug(std::string_view str);
+void info(std::string_view str);
+void warn(std::string_view str);
+void error(std::string_view str);
+
+}  // namespace console::log

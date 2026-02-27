@@ -1,0 +1,1 @@
+$* $src_root/scripts/default.lua 1>| 2>&1 == 0

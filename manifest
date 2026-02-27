@@ -16,3 +16,4 @@ depends: * bpkg >= 0.17.0
 depends: libsandbox
 depends: libxstd
 depends: sol2 ^3.5.0
+depends: fmt
